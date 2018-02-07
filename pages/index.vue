@@ -10,23 +10,29 @@
     <div class="contents">
       <div class="item">
         <h1>Make TTL</h1>
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="150px">
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="50%">
           <el-form-item label="HostName" prop="hostName">
+            <el-col :span="11">
               <el-input type="text" placeholder="server01" v-model="ruleForm.hostName" auto-complete="off"></el-input>
+            </el-col>
           </el-form-item>
           <el-form-item label="IP Address" prop="ipAddress">
+           <el-col :span="11">
               <el-input type="text" placeholder="123.456.789.123" v-model="ruleForm.ipAddress"></el-input>
+            </el-col>
           </el-form-item>
           <el-form-item label="Login User Name" prop="user">
+           <el-col :span="11">
               <el-input type="text" placeholder="user01" v-model="ruleForm.user"></el-input>
+            </el-col>
           </el-form-item>
           <el-form-item label="Password" prop="hostName">
+           <el-col :span="11">
               <el-input type="password" placeholder="password01" v-model="ruleForm.password"></el-input>
+            </el-col>
           </el-form-item>
-          <el-form-item>
             <el-button @click="resetForm('ruleForm')">Reset</el-button>
             <el-button type="primary" @click="submitForm('ruleForm')" class="el-button el-button--primary">Make!</el-button>
-          </el-form-item>
         </el-form>
       </div>
 
@@ -77,7 +83,7 @@
             { required: true, message: 'Input Value', trigger: 'blur' }
           ],
         },
-        fileList: [{name: 'servers.csv'}],
+        fileList: [],
       };
     },
     methods: {
