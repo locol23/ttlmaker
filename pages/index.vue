@@ -46,9 +46,11 @@
           :on-remove="handleRemove"
           :file-list="fileList"
         >
-        <i class="el-icon-upload"></i>
-        <div class="el-upload__text">ファイルをドロップまたは<em>こちらをクリック</em></div>
-        <div class="el-upload__tip" slot="tip">500KB以下でお願いします</div>
+          <i class="el-icon-upload"></i>
+          <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
+          <div class="el-upload__tip" slot="tip">csv file with a size less than 500kb</div>
+          <div class="el-upload__tip" slot="tip">csv file format : [Host Name,IP Address,User Name,Password]</div>
+          <div class="el-upload__tip" slot="tip">example : [server01,123.456.789.123,user01,password01]</div>
         </el-upload>
 
       <!-- <router-link to="{path: '/download', params: ''}" tag="button" class="el-button el-button--primary">Make !</router-link> -->
