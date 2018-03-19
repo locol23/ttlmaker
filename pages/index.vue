@@ -26,7 +26,7 @@
               <el-input type="text" placeholder="user01" v-model="ruleForm.user"></el-input>
             </el-col>
           </el-form-item>
-          <el-form-item label="Password" prop="hostName">
+          <el-form-item label="Password" prop="password">
            <el-col :span="11">
               <el-input type="password" placeholder="password01" v-model="ruleForm.password"></el-input>
             </el-col>
