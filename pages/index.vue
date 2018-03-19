@@ -92,6 +92,7 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
+            this.$store.dispatch('makeTtl', this.$refs[formName].model)
             this.$router.push('/download')
           } else {
             console.log('Error Make TTL!!');
